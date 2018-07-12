@@ -1,0 +1,12 @@
+* {
+	font-family: lato;
+	text-align: center;
+}
+
+h1 {
+	color: red;
+}
+
+fieldset {
+	border: none;
+}
