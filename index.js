@@ -25,7 +25,11 @@ function getApiData () {
 
 function displayResults (info) {
 	$.each(info, function(index, value){
-	  		$('<img>').attr("src", value.snippet.thumbnails.medium.url).appendTo('.js-search-results');
+      let html = `
+        <a href='https://www.youtube.com/watch?v=${value.id.videoId}' target='_blank'>
+	  		   <img src= ${value.snippet.thumbnails.medium.url}
+        </a>`
+        $('.js-search-results').append(html);
 	  		$('.js-query').val('');
 	 	});
 }
