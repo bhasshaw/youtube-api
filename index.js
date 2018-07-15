@@ -24,13 +24,16 @@ function getApiData () {
 }
 
 function displayResults (info) {
+	$('.js-search-results').empty();
 	$.each(info, function(index, value){
       let html = `
-        <a href='https://www.youtube.com/watch?v=${value.id.videoId}' target='_blank'>
-	  		   <img src= ${value.snippet.thumbnails.medium.url}
-        </a>`
+      		<div class="video-template">
+        	<a href='https://www.youtube.com/watch?v=${value.id.videoId}' target='_blank'>
+	  		   <img role="presentation" src= ${value.snippet.thumbnails.medium.url} alt="images of what you searched for">
+        	</a>
+        	</div>`
         $('.js-search-results').append(html);
-	  		$('.js-query').val('');
+	  	$('.js-query').val('');
 	 	});
 }
 
