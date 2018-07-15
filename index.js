@@ -29,7 +29,7 @@ function displayResults (info) {
       let html = `
       		<div class="video-template">
         	<a href='https://www.youtube.com/watch?v=${value.id.videoId}' target='_blank'>
-	  		   <img role="presentation" src= ${value.snippet.thumbnails.medium.url} alt="images of what you searched for">
+	  		   <img src= ${value.snippet.thumbnails.medium.url} alt="images of what you searched for">
         	</a>
         	</div>`
         $('.js-search-results').append(html);
